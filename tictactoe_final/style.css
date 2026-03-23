@@ -84,13 +84,3 @@ h1 {
 #restart:hover {
     background: #d91ab8;
 }
-
-#winning-line {
-    position: absolute;
-    height: 6px;
-    background: #00ffe1;
-    box-shadow: 0 0 15px #00ffe1;
-    transform-origin: left center;
-    transform: scaleX(0);
-    transition: transform 0.5s ease;
-}
