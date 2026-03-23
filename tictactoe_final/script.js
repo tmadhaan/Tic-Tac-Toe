@@ -27,7 +27,6 @@ const player2Label = document.getElementById("player2-label");
 
 // Control buttons and winning line display
 const restartButton = document.getElementById("restart");
-const winningLine = document.getElementById("winning-line");
 
 // All of the winning combinations for tic tac toe
 const wins = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
@@ -92,77 +91,20 @@ function handleCellClick(e){
 
     }
 }
-// Checks winner and draws line through winning game
+// Checks winner
 function checkWinner(player){
 
     for(let i=0;i<wins.length;i++){
         const[a,b,c]=wins[i];
 
-        if(board[a]===player&&board[b]===player&&board[c]===player){
-            drawWinningLine(i);
+        if(board[a]===player && board[b]===player && board[c]===player){
             return true;
         }
     }
-            return false;
+
+    return false;
 }
-// All ways possible to win tic tac toe
-function drawWinningLine(index){
 
-    const size=150;
-
-    switch(index){
-
-        case 0:
-        winningLine.style.width=`${size*3-20}px`;
-        winningLine.style.top=`${size/2}px`;
-        winningLine.style.left=`0`;
-        winningLine.style.transform="scaleX(1)";
-        break;
-
-        case 1:
-        winningLine.style.width=`${size*3-20}px`;
-        winningLine.style.top=`${size*1.5}px`;
-        winningLine.style.left=`0`;
-        winningLine.style.transform="scaleX(1)";
-        break;
-
-        case 2:
-        winningLine.style.width=`${size*3-20}px`;
-        winningLine.style.top=`${size*2.5}px`;
-        winningLine.style.left=`0`;
-        winningLine.style.transform="scaleX(1)";
-        break;
-
-        case 3:
-        winningLine.style.width=`${size*3-20}px`;
-        winningLine.style.left=`${size/2}px`;
-        winningLine.style.transform="rotate(90deg) scaleX(1)";
-        break;
-
-        case 4:
-        winningLine.style.width=`${size*3-20}px`;
-        winningLine.style.left=`${size*1.5}px`;
-        winningLine.style.transform="rotate(90deg) scaleX(1)";
-        break;
-
-        case 5:
-        winningLine.style.width=`${size*3-20}px`;
-        winningLine.style.left=`${size*2.5}px`;
-        winningLine.style.transform="rotate(90deg) scaleX(1)";
-        break;
-
-        case 6:
-        winningLine.style.width=`${Math.sqrt(2)*(size*3-20)}px`;
-        winningLine.style.transform="rotate(45deg) scaleX(1)";
-        break;
-
-        case 7:
-        winningLine.style.width=`${Math.sqrt(2)*(size*3-20)}px`;
-        winningLine.style.transform="rotate(-45deg) scaleX(1)";
-        break;
-    }
-
-}
 // Restarts game, keeps track of score
 function restartGame(){
 
@@ -174,8 +116,6 @@ function restartGame(){
         cell.textContent="";
         cell.classList.remove("x","o");
     });
-
-    winningLine.style.transform="scaleX(0)";
 
     currentPlayer="X";
     gameActive=true;
