@@ -1,5 +1,5 @@
 # Tic-Tac-Toe
-A simple interactive tic tac toe game created using HTML, CSS, and JavaScript.
+A simple tic tac toe game created using HTML, CSS, and JavaScript.
 
 ## Features
 - Two player game
