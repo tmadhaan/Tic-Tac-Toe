@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: #0b0b0b;
+    color: white;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color:#ff2bd6;
+    text-shadow: 0 0 20px #ff2bd6;
+}
+
+#player-inputs {
+    margin-bottom: 15px;
+}
+
+#player-inputs input {
+    padding: 8px;
+    margin: 5px;
+    border-radius: 5px;
+    border: none;
+    background: #1e1e1e;
+    color: white;
+}
+
+#scoreboard {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+#game-board {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    gap: 10px;
+    margin: 20px auto;
+    width: max-content;
+}
+
+.cell {
+    width: 150px;
+    height: 150px;
+    font-size: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #141414;
+    border: 2px solid #ff2bd6;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.cell:hover {
+    background: #1f1f1f;
+}
+
+.x {
+    color: #ff2bd6;
+    text-shadow: 0 0 12px #ff2bd6;
+}
+
+.o {
+    color: #7a5cff;
+    text-shadow: 0 0 12px #7a5cff;
+}
+
+#restart {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background: #ffffff;
+    color: black;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#restart:hover {
+    background: #d91ab8;
+}
+
+#winning-line {
+    position: absolute;
+    height: 6px;
+    background: #00ffe1;
+    box-shadow: 0 0 15px #00ffe1;
+    transform-origin: left center;
+    transform: scaleX(0);
+    transition: transform 0.5s ease;
+}

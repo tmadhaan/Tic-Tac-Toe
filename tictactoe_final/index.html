@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale =1.0">
+            <title>Tic Tac Toe Game</title>
+            <link rel="stylesheet" href="style.css">
+        </head>
+
+        <body>
+            <!-- Main Title -->
+            <h1>Tic Tac Toe</h1>
+            <!-- Enter both players names in text boxes -->
+            <div id="player-inputs">
+                <input id="player1-name" placeholder="Player 1 Name">
+                <input id="player2-name" placeholder="Player 2 Name">
+            </div>
+
+            <!-- Shows player 1, player 2, and tie scores -->
+            <!-- Scores automatically update -->
+            <div id="scoreboard">
+                <div><span id="player1-label">Player 1</span>: <span id="player1-score"></span></div>
+                <div><span id="player2-label">Player 2</span>: <span id="player2-score"></span></div>
+                <div>Ties: <span id="tie-score">0</span></div>
+            </div>
+
+            <h2 id="status">Player 1's turn</h2>
+            
+            <div id="game-board">
+                <div id="winning-line"></div>
+            </div>
+
+            <!-- Restarts game, keeps previous scores until game is reloaded-->
+            <button id="restart">Restart Game</button>
+
+            <script src="script.js"></script>
+
+        </body>
+    </html>
